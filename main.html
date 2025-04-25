@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Buy: Log In</title>
+    
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJf+NFc1t5tK4aZtPgmYQjzqP5Hk5zXtQ0/zHzqTn+Zt+z5aXzZrZ9vH5Di5" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="buy-png-24.png" type="image/x-icon">
+    <link rel="stylesheet" href="login.css">
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var errorMessage = document.getElementById("error-message");
+
+            if (email == "" || password == "") {
+                errorMessage.style.display = "block";  // Show the error message
+                return false;  // Prevent form submission
+            }
+
+            errorMessage.style.display = "none";  
+            window.location.href = "h.html";  // Redirect to h.html on success
+            return false;  // Prevent default form submission (you can change this if needed)
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Log In</h1>
+
+        <!-- Error Message -->
+        <div id="error-message" class="alert alert-danger" style="display: none;">
+            Please enter both email and password.
+        </div>
+
+        <!-- Email Input -->
+        <div class="inputbox mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" required>
+        </div>
+
+        <!-- Password Input -->
+        <div class="inputbox mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" required>
+        </div>
+
+        <!-- Remember Me and Forgot Password -->
+        <div class="forget d-flex justify-content-between mb-3">
+            <div>
+                <input type="checkbox" id="remember-me"> Remember Me
+            </div>
+            <div>
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+
+        <!-- Log In Button -->
+        <div class="button text-center mb-3">
+            <button class="btn btn-primary" onclick="return validateForm()">Log In</button>
+        </div>
+
+        <!-- Register Link -->
+        <p class="text-center">Don't have an account? <a href="register.html">Register</a></p>
+    </div>
+
+    <!-- Bootstrap JS (Optional, for functionality like tooltips or modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0D1oJkzFyL5rZjD2zHfjsfG25sJheGzz36Ds9j8szgnfP3t4" crossorigin="anonymous"></script>
+</body>
+
+</html>
