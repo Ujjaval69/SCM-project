@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Buy: Register</title>
 
-    <!-- Add Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJf+NFc1t5tK4aZtPgmYQjzqP5Hk5zXtQ0/zHzqTn+Zt+z5aXzZrZ9vH5Di5" crossorigin="anonymous">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="buy-png-24.png" type="image/x-icon">
     <link rel="stylesheet" href="login.css">
 
     <script>
         function validateRegisterForm() {
-            var username = document.getElementById("username").value;
-            var email = document.getElementById("email").value;
+            var username = document.getElementById("username").value.trim();
+            var email = document.getElementById("email").value.trim();
             var password = document.getElementById("password").value;
             var confirmPassword = document.getElementById("confirm-password").value;
-            var errorMessage = document.getElementById("error-message");z
+            var errorMessage = document.getElementById("error-message");
 
             // Check if any field is empty
-            if (username == "" || email == "" || password == "" || confirmPassword == "") {
+            if (username === "" || email === "" || password === "" || confirmPassword === "") {
                 errorMessage.style.display = "block";
                 errorMessage.textContent = "All fields are required.";
                 return false;
@@ -34,58 +34,55 @@
                 return false;
             }
 
-            errorMessage.style.display = "none";  // Hide error message
-            alert("Registration successful!");  // Simulate successful registration
-            window.location.href = "h.html";  // Redirect to homepage after successful registration
-            return false;  // Prevent default form submission
+            errorMessage.style.display = "none"; // Hide error message
+            alert("Registration successful!");    // Simulate successful registration
+            window.location.href = "h.html";      // Redirect to homepage
+            return false; // Prevent default form submission
         }
     </script>
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="text-center">Register</h1>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Register</h1>
 
         <!-- Error Message -->
-        <div id="error-message" class="alert alert-danger" style="display: none;">
+        <div id="error-message" class="alert alert-danger d-none">
             Please fill in all the fields correctly.
         </div>
 
-        <!-- Username Input -->
-        <div class="inputbox mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" id="username" class="form-control" required>
-        </div>
+        <!-- Registration Form -->
+        <form onsubmit="return validateRegisterForm();">
+            <div class="inputbox mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" class="form-control" required>
+            </div>
 
-        <!-- Email Input -->
-        <div class="inputbox mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" class="form-control" required>
-        </div>
+            <div class="inputbox mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
 
-        <!-- Password Input -->
-        <div class="inputbox mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" id="password" class="form-control" required>
-        </div>
+            <div class="inputbox mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" class="form-control" required>
+            </div>
 
-        <!-- Confirm Password Input -->
-        <div class="inputbox mb-3">
-            <label for="confirm-password" class="form-label">Confirm Password</label>
-            <input type="password" id="confirm-password" class="form-control" required>
-        </div>
+            <div class="inputbox mb-4">
+                <label for="confirm-password" class="form-label">Confirm Password</label>
+                <input type="password" id="confirm-password" class="form-control" required>
+            </div>
 
-        <!-- Register Button -->
-        <div class="button text-center mb-3">
-            <button class="btn btn-primary" onclick="return validateRegisterForm()">Register</button>
-        </div>
+            <div class="text-center mb-3">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </form>
 
         <!-- Login Link -->
         <p class="text-center">Already have an account? <a href="login.html">Log In</a></p>
     </div>
 
-    <!-- Bootstrap JS (Optional, for functionality like tooltips or modals) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0D1oJkzFyL5rZjD2zHfjsfG25sJheGzz36Ds9j8szgnfP3t4" crossorigin="anonymous"></script>
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
