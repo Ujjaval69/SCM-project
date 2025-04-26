@@ -9,35 +9,36 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    width: 100%;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('shop.webp') no-repeat center center/cover;
-}
-
-h1 {
-    margin: 20px;
-    font-size: 2rem;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    background: url('shop.webp') no-repeat center center/cover;
+    background-size: cover;
 }
 
 .container {
-    width: 370px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 40px 30px;
+    width: 100%;
+}
+
+.login-form {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    color: #fff;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 2rem;
     color: #fff;
 }
 
 .inputbox {
     width: 100%;
-    border-bottom: 2px solid #ccc;
-    margin: 20px 0;
-    position: relative;
+    margin: 15px 0;
 }
 
 .inputbox input {
@@ -46,36 +47,19 @@ h1 {
     border: none;
     outline: none;
     font-size: 1.1em;
-    padding: 10px 5px;
-    color: #fff;
+    padding: 10px 15px;
+    color: white;
+    border-bottom: 2px solid #ddd;
 }
 
 .inputbox input::placeholder {
     color: #ddd;
 }
 
-.forget {
-    margin-bottom: 20px;
-    font-size: 0.9em;
-    color: #eee;
-    display: flex;
-    justify-content: center;
-}
-
-.forget a {
-    color: #ffd700;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.forget a:hover {
-    text-decoration: underline;
-}
-
 button {
     width: 100%;
     padding: 12px;
-    border-radius: 50px;
+    border-radius: 40px;
     background: #ffd700;
     color: #000;
     border: none;
@@ -91,9 +75,27 @@ button:hover {
     color: #ffd700;
 }
 
+.forget {
+    font-size: 0.9em;
+    color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forget a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+}
+
 .register {
     font-size: 0.9em;
-    color: #eee;
+    color: white;
     text-align: center;
     margin: 25px 0 10px;
 }
@@ -106,4 +108,9 @@ button:hover {
 
 .register p a:hover {
     text-decoration: underline;
+}
+
+.alert {
+    margin-bottom: 20px;
+    font-size: 1em;
 }
