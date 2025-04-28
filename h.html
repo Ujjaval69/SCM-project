@@ -28,7 +28,7 @@
       margin: auto;
       padding: 20px;
     }
-    .category {
+    section.category {
       margin-bottom: 50px;
     }
     .product {
@@ -42,6 +42,7 @@
       width: calc(33.333% - 40px);
       box-sizing: border-box;
       transition: all 0.3s ease-in-out;
+      position: relative;
     }
     .product:hover {
       transform: translateY(-8px);
@@ -63,6 +64,20 @@
       font-weight: bold;
       color: #28a745;
       margin-bottom: 15px;
+      transition: color 0.3s;
+    }
+    .product p:hover {
+      color: #1e7e34;
+    }
+    .badge-sale {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: red;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 0.8rem;
     }
     footer {
       text-align: center;
@@ -112,77 +127,80 @@
 </header>
 
 <div class="container">
-  <div class="category">
+  <section class="category">
     <h2 class="mb-4">👔 Men's Clothing</h2>
     <div class="d-flex flex-wrap justify-content-center">
       <div class="product">
+        <span class="badge-sale">Sale</span>
         <img src="men shirts.webp" alt="Men's Shirt">
         <h3>Men's Casual Shirt</h3>
         <p>₹1999</p>
-        <button class="btn btn-primary">Add to Cart</button>
+        <button class="btn btn-success">Shop Now</button>
       </div>
       <div class="product">
         <img src="pants1.jpg" alt="Men's Pants">
         <h3>Men's Jeans</h3>
         <p>₹1599</p>
-        <button class="btn btn-primary">Add to Cart</button>
+        <button class="btn btn-success">Shop Now</button>
       </div>
       <div class="product">
         <img src="blazer2.webp" alt="Men's Blazer">
         <h3>Formal Blazer</h3>
         <p>₹3499</p>
-        <button class="btn btn-primary">Add to Cart</button>
+        <button class="btn btn-success">Shop Now</button>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="category">
+  <section class="category">
     <h2 class="mb-4">👗 Women's Clothing</h2>
     <div class="d-flex flex-wrap justify-content-center">
       <div class="product">
+        <span class="badge-sale">New</span>
         <img src="women.jpg" alt="Women's Dress">
         <h3>Summer Dress</h3>
         <p>₹2799</p>
-        <button class="btn btn-primary">Add to Cart</button>
+        <button class="btn btn-success">Shop Now</button>
       </div>
       <div class="product">
         <img src="top.jpg" alt="Women's Top">
         <h3>Casual Top</h3>
         <p>₹2099</p>
-        <button class="btn btn-primary">Add to Cart</button>
+        <button class="btn btn-success">Shop Now</button>
       </div>
       <div class="product">
         <img src="saree (2).webp" alt="Women's Saree">
         <h3>Traditional Saree</h3>
         <p>₹4999</p>
-        <button class="btn btn-primary">Add to Cart</button>
+        <button class="btn btn-success">Shop Now</button>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="category">
+  <section class="category">
     <h2 class="mb-4">🧒 Kids' Clothing</h2>
     <div class="d-flex flex-wrap justify-content-center">
       <div class="product">
         <img src="kid tshirt.avif" alt="Kids' Shirt">
         <h3>Kids' T-Shirt</h3>
         <p>₹1299</p>
-        <button class="btn btn-primary">Add to Cart</button>
+        <button class="btn btn-success">Shop Now</button>
       </div>
       <div class="product">
         <img src="kid jeans1.jpg" alt="Kids' Pants">
         <h3>Kids' Jeans</h3>
         <p>₹1399</p>
-        <button class="btn btn-primary">Add to Cart</button>
+        <button class="btn btn-success">Shop Now</button>
       </div>
       <div class="product">
+        <span class="badge-sale">Sale</span>
         <img src="kidsjacket (1).webp" alt="Kids' Jacket">
         <h3>Winter Jacket</h3>
         <p>₹1799</p>
-        <button class="btn btn-primary">Add to Cart</button>
+        <button class="btn btn-success">Shop Now</button>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 
 <footer>
