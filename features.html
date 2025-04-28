@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Features - Clothes Shop</title>
-  
+  <title>Features - Best Buy Clothes Shop</title>
+
   <!-- Bootstrap 5 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -33,9 +33,14 @@
       margin-bottom: 20px;
       color: #343a40;
     }
-    ul li {
-      margin-bottom: 12px;
-      font-size: 1.1rem;
+    .feature-card {
+      border: none;
+      text-align: center;
+      background: #f8f9fa;
+      transition: transform 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
     }
     footer {
       text-align: center;
@@ -50,10 +55,10 @@
 <body>
 
 <header>
-  <h1>Explore Our Amazing Features</h1>
+  <h1>Discover Our Premium Features</h1>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="main.html">Best Buy</a>
+      <a class="navbar-brand" href="main.html">Best Buy Clothes</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -75,17 +80,47 @@
 </header>
 
 <div class="container">
-  <h2 class="text-center">Why Shop With Us?</h2>
-  <p class="text-center mb-4">Experience shopping like never before with exclusive benefits:</p>
+  <h2 class="text-center">Why Choose Us?</h2>
+  <p class="text-center mb-5">Enjoy a seamless shopping experience with top-notch features:</p>
   
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">🛒 Wide range of clothing for men, women, and kids.</li>
-    <li class="list-group-item">📱 Fully responsive and mobile-friendly design.</li>
-    <li class="list-group-item">🔒 Secure checkout with multiple payment options.</li>
-    <li class="list-group-item">🚚 Lightning-fast delivery across the country.</li>
-    <li class="list-group-item">🎉 Regular discounts, deals, and festive sales!</li>
-    <li class="list-group-item">🖼️ High-quality images with detailed product descriptions.</li>
-  </ul>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card feature-card p-3">
+        <h5>🛒 Diverse Collection</h5>
+        <p>Stylish clothing for men, women, and kids at unbeatable prices.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card feature-card p-3">
+        <h5>📱 Mobile Friendly</h5>
+        <p>Shop easily on any device with our responsive design.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card feature-card p-3">
+        <h5>🔒 Secure Checkout</h5>
+        <p>Fast and safe payments with multiple trusted options.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card feature-card p-3">
+        <h5>🚚 Quick Delivery</h5>
+        <p>Receive your orders at lightning speed anywhere in the country.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card feature-card p-3">
+        <h5>🎉 Deals & Discounts</h5>
+        <p>Enjoy exciting offers and festival sales all year round.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card feature-card p-3">
+        <h5>🖼️ Quality Images</h5>
+        <p>Clear, detailed product photos with rich descriptions.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <footer>
